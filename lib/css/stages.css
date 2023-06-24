@@ -1,0 +1,234 @@
+@import url('fonts.css');
+
+body {
+	font-family: 'Belleza', sans-serif;
+}
+
+hr {
+	border: 2px solid #E2DED0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5%;
+}
+
+.info-wrapper {
+	position: relative;
+}
+
+.info-content {
+	position: relative;
+	margin-left: 420px;
+}
+
+.info-content p {
+	color: white;
+	font-size: 2em;
+}
+
+.main-word,
+.section .main-word {
+	color: #A3C0E6;
+	padding-top: 1%;
+}
+
+.situation .situation-name {
+	font-size: 1.5em;
+}
+
+.info-content .description-text {
+	color: #E2DED0;
+	font-size: 1em;
+	width: 60%;
+	margin-bottom: 0;
+}
+
+.icon-stage-1 {
+	background-color: #928880;
+	border-radius: 15px;
+	margin-left: 2%;
+	width: 200px;
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.473);
+	cursor: pointer;
+}
+
+#logo-stage {
+	width: 70%;
+}
+
+#stage-1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#stage-1 .main-title {
+	margin-bottom: 0;
+}
+
+#stage-1 .date {
+	margin-top: 0.5%;
+	font-size: 1em;
+}
+
+.presentation .main-word,
+.presentation .presentation-text,
+.langages .main-word,
+.situation .main-word,
+.situation .situation-name {
+	text-align: center;
+}
+
+.presentation .presentation-text {
+	font-size: 1em;
+	color: #E2DED0;
+	width: 40%;
+	margin-left: 30%;
+}
+
+.img-langage {
+	width: 60px;
+	margin-right: 10%;
+	margin-left: 7%;
+}
+
+.logo-langage {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #928880;
+	border-radius: 30px;
+	width: 200px;
+	height: 70px;
+	margin-left: 3%;
+	margin-bottom: 3%;
+	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.473);
+}
+
+.logo-langage .text-langage {
+	font-size: 1.2em;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.situation-content {
+	background-color: #92888094;
+	border-radius: 30px;
+	margin-left: 12%;
+	margin-right: 12%;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 5%;
+}
+
+.img-situation1,
+.img-situation2,
+.photo-situation1,
+.photo-situation2 {
+	border-radius: 20px;
+	border: 3px solid #A3C0E6;
+}
+
+.img-situation1 {
+	width: 75%;
+	margin-right: 2%;
+	margin-bottom: 3%;
+}
+
+.img-situation2 {
+	width: 70%;
+	margin-left: 2%;
+	margin-bottom: 3%;
+}
+
+.photo-situation1 {
+	width: 40%;
+	margin-right: 2%;
+	margin-bottom: 3%;
+}
+
+.photo-situation2 {
+	width: 40%;
+	margin-left: 2%;
+	margin-bottom: 3%;
+}
+
+.situation .text-situation {
+	font-size: 1em;
+	text-align: justify;
+	width: 40%;
+}
+
+.situation .situation1 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.code-block {
+	margin: 2%;
+	border-radius: 10px;
+	background: #ffffff;
+	overflow: auto;
+	width: 55%;
+	border: solid gray;
+	border-width: .1em .1em .1em .8em;
+	padding: .2em .6em;
+}
+
+.code-block .attribute {
+	background-color: #fff0f0;
+}
+
+.code-block .attribute-component {
+	color: #333333;
+}
+
+.code-block .python-code {
+	color: #008800;
+	font-weight: bold;
+}
+
+.code-block .python-booleen {
+	color: #007020;
+}
+
+.code-block .python-function {
+	color: #0066BB;
+	font-weight: bold;
+}
+
+@media (max-width: 1400px) {
+	.situation .situation1 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.situation .text-situation {
+		width: 70%;
+	}
+
+	.situation .code-block {
+		width: 50% !important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.info-content {
+		margin-left: 2%;
+	}
+}

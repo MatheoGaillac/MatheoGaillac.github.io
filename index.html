@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Mathéo Gaillac - Étudiant en Développement</title>
+	<link rel="stylesheet" href="lib/css/index.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			loadContent('vues/accueil.html', '#home');
+			loadSidebar('vues/sidebar.html');
+
+			$('#sidebar-content').on('click', 'a.sidebar-link', function (event) {
+				event.preventDefault();
+				$('a.sidebar-link').removeClass('active-link');
+				$('a.sidebar-link').removeAttr('id');
+				$(this).addClass('active-link');
+				var url = $(this).attr('href');
+				var pageId = $(this).data('page-id');
+				loadContent(url, this);
+				$.ajax({
+					url: url,
+					success: function (data) {
+						$('#content').html(data);
+						$('a.sidebar-link').removeAttr('id');
+						$('a.sidebar-link[data-page-id="' + pageId + '"]').attr('id', pageId);
+					}
+				});
+			});
+
+			function loadContent(url, link) {
+				$.ajax({
+					url: url,
+					success: function (data) {
+						$('#content').html(data);
+					}
+				});
+			}
+
+			function loadSidebar(url) {
+				$.ajax({
+					url: url,
+					success: function (data) {
+						$('#sidebar-content').html(data);
+					}
+				});
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<div id="page-content">
+		<div id="sidebar-content">
+		</div>
+		<div id="content">
+		</div>
+	</div>
+
+</body>
+
+</html>

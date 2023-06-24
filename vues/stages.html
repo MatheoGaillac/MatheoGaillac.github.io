@@ -1,0 +1,496 @@
+<link rel="stylesheet" href="lib/css/stages.css">
+<script src="lib/js/stages.js"></script>
+
+<body>
+	<div class="info-wrapper">
+		<div class="info-content">
+			<p>Mes <span class="main-word">stages</span></p>
+			<div class="icon-stage-1" onclick="showStage1()">
+				<img id="logo-stage" src="images/logoStage1.png" alt="Logo de la Métropole de Lyon">
+				<p class="description-text">"La métropole de Lyon"<br>15 Mai 2023 - 23 Juin 2023</p>
+			</div>
+			<div id="stage-1" style="display: none;">
+				<p class="main-title">La métropole de Lyon</p>
+				<p class="date">15/05/23 - 23/06/23</p>
+				<div class="section">
+					<div class="presentation">
+						<p class="main-word">Présentation</p>
+						<p class="presentation-text">Ce stage de première année a été réalisé au sein de la métropole de
+							Lyon,
+							à la Direction Innovation Numérique et Systèmes d'Information et plus précisément
+							à la Direction Adjointe Architecture et Gouvernance.
+							Durant ce stage, j'ai eu l'occasion de travailler sur le site de gestion des portefeuilles
+							et des
+							projets au sein de la direction, en ajoutant des fonctionnalités, optimisant le site...</p>
+					</div>
+					<div class="langages">
+						<p class="main-word">Langages & Outils</p>
+						<div class="row">
+							<div class="logo-langage">
+								<img class="img-langage" src="images/python.png" alt="Logo Python">
+								<p class="text-langage">Python</p>
+							</div>
+							<div class="logo-langage">
+								<img class="img-langage" src="images/plotly.png" alt="Logo Plotly Dash">
+								<p class="text-langage">Plotly Dash<br>Flask</p>
+							</div>
+							<div class="logo-langage">
+								<img class="img-langage" src="images/HTMLCSS.png" alt="Logo HTML/CSS">
+								<p class="text-langage">HTML<br>CSS</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="logo-langage">
+								<img class="img-langage" src="images/postgre.png" alt="Logo PostGreSQL">
+								<p class="text-langage">PostGreSQL</p>
+							</div>
+							<div class="logo-langage">
+								<img class="img-langage" src="images/gitlab.png" alt="Logo GitLab">
+								<p class="text-langage">GitLab</p>
+							</div>
+							<div class="logo-langage">
+								<img class="img-langage" src="images/git.png" alt="Logo Git">
+								<p class="text-langage">Git</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="logo-langage">
+								<img class="img-langage" src="images/openshift.png" alt="Logo Openshift">
+								<p class="text-langage">Openshift</p>
+							</div>
+							<div class="logo-langage">
+								<img class="img-langage" src="images/vscode.png" alt="Logo VsCode">
+								<p class="text-langage">VsCode</p>
+							</div>
+						</div>
+					</div>
+					<div class="situation">
+						<div class="situation-content">
+							<p class="main-word">Situation</p>
+							<p class="situation-name">Afficher les résultats</p>
+							<div class="info">
+								<div class="situation1">
+									<img class="img-situation1" src="images/stage1/situation1/ButtonSite.png"
+										alt="Screenshot d'exemple du bouton d'affichage">
+									<p class="text-situation">Dans un objectif d'optimisation des performances, nous
+										avons mis en place un bouton de confirmation, afin de recharger les données
+										par rapports aux filtres. Avant, l'utilisateur devait simplement supprimer
+										ou ajouter un filtre, le chargement se faisait instantanément. Cependant,
+										des dizaines de requêtes s'effectuaient en même temps et ralentissaient
+										l'application.</p>
+								</div>
+								<div class="situation1">
+									<p class="text-situation">Ici, c'est l'affichage du bouton qui est géré, pour
+										pouvoir l'appeler en variable globale dans plusieurs fichiers.</p>
+									<img class="img-situation2" src="images/stage1/situation1/RefreshButton.png"
+										alt="Screenshot d'un morceau de code pour le layout du bouton">
+								</div>
+								<div class="situation1">
+									<!-- HTML generated using hilite.me -->
+									<div class="code-block">
+										<pre>
+<span style="color: #555555; font-weight: bold">@app.callback</span>(
+	Output(<span class="attribute">"nombre_activites", "figure"</span>),
+	Output(<span class="attribute">"nombre_activites_duree_cadrage", "figure"</span>),
+	Output(<span class="attribute">"pourcentage_activites_date_maj", "figure"</span>),
+	Output(<span class="attribute">"pourcentage_activites_expert_technique", "figure"</span>),
+	Output(<span class="attribute">"nombre_activites_attente", "figure"</span>),
+	Output(<span class="attribute">"nombre_activites_pluie", "figure"</span>),
+	Output(<span class="attribute">"diaporama_1_1", "children"</span>),
+	Output(<span class="attribute">"diaporama_pe_1_1", "children"</span>),
+	Output(<span class="attribute">"diaporama_1_2", "children"</span>),
+	Output(<span class="attribute">"diaporama_pe_1_2", "children"</span>),
+	Output(component_id<span class="attribute-component">=</span><span class="attribute">"chiffres_cles_1"</span>, component_property<span class="attribute-component">=</span><span class="attribute">'hidden'</span>),
+	Output(component_id<span class="attribute-component">=</span><span class="attribute">"synthese_portefeuille_1"</span>, component_property<span class="attribute-component">=</span><span class="attribute">'hidden'</span>),
+	Output(component_id<span class="attribute-component">=</span><span class="attribute">"diaporama_meteo_1"</span>, component_property<span class="attribute-component">=</span><span class="attribute">'hidden'</span>),
+	Output(<span class="attribute">"loading-output-1"</span>,<span class="attribute">"children"</span>),
+	State(<span class="attribute">"switch_chiffres_cles_1"</span>,<span class="attribute">"on"</span>),
+	State(<span class="attribute">"switch_synthese_portefeuille_1"</span>,<span class="attribute">"on"</span>),
+	State(<span class="attribute">"switch_diaporama_meteo_1"</span>,<span class="attribute">"on"</span>),
+	State(<span class="attribute">"filtre_portefeuilles_1", "value"</span>),
+	State(<span class="attribute">"filtre_activites_1", "value"</span>),
+	Input(<span class="attribute">"button_refresh_1", "n_clicks"</span>))
+										</pre>
+									</div>
+									<p class="text-situation">Le morceau de code représente le "callback" en charge des
+										filtres et de l'affichage des données. Les Output représentent l'endroit où
+										seront affichées les données, les State représentent respectivement chacun des
+										filtres et l'Input représente le bouton. À la base, tous les boutons switchs
+										d'affichages et les filtres étaient en Input et permettaient le changement
+										instantané. Mais en les passants par la méthode State gérée par un bouton en
+										Input, ils doivent attendre le click sur le bouton !</p>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="situation-content">
+							<p class="main-word">Situation</p>
+							<p class="situation-name">Bouton Switch</p>
+							<div class="info">
+								<div class="situation1">
+									<p class="text-situation">Toujours dans une réflexion d'optimisation de
+										l'application web, nous avons remarqué que lorsque l'on souhaitait afficher
+										plusieurs diaporamas en même temps, le site était drastiquement ralenti voire se
+										stoppait. Nous avons donc décidé d'empêcher l'affichage en même temps de
+										plusieurs diaporamas, en permettant à l'utilisateur de ne pouvoir choisir qu'un
+										seul diaporama, les autres se désactivant automatiquement.</p>
+									<img class="img-situation2" src="images/stage1/situation2/BoutonSwitch.png"
+										alt="Screenshot d'un exemple des 3 boutons switch pour les diaporama">
+								</div>
+								<div class="situation1">
+									<!-- HTML generated using hilite.me -->
+									<div class="code-block">
+										<pre>
+<span style="color: #555555; font-weight: bold">@app.callback</span>(
+	Output(<span class="attribute">"switch_diaporama_meteo_2", "on"</span>),
+	Output(<span class="attribute">"switch_diaporama_alertes_2", "on"</span>),
+	Output(<span class="attribute">"switch_transversalite_2", "on"</span>),
+	Input(<span class="attribute">"switch_diaporama_meteo_2", "on"</span>),
+	Input(<span class="attribute">"switch_diaporama_alertes_2", "on"</span>),
+	Input(<span class="attribute">"switch_transversalite_2", "on"</span>),)
+	<span class="python-code">def</span> <span class="python-function">update_switch</span>(meteo_on, alerte_on, transversalite_on):
+	ctx <span class="attribute-component">=</span> dash<span class="attribute-component">.</span>callback_context
+	button_id <span class="attribute-component">=</span> ctx<span class="attribute-component">.</span>triggered[0]['prop_id'].split('.')[0]
+	<span class="python-code">if</span> button_id <span class="attribute-component">==</span> <span class="attribute">"switch_diaporama_meteo_2"</span>:
+	  <span class="python-code">if</span> meteo_on:
+		<span class="python-code">return</span> <span class="python-booleen">True, False, False</span>
+	  <span class="python-code">else</span>:
+		<span class="python-code">return</span> <span class="python-booleen">False, False, False</span>
+	<span class="python-code">elif</span> button_id <span class="attribute-component">==</span> <span class="attribute">"switch_diaporama_alertes_2"</span>:
+	  <span class="python-code">if</span> alerte_on:
+		<span class="python-code">return</span> <span class="python-booleen">False, True, False</span>
+	  <span class="python-code">else</span>:
+		<span class="python-code">return</span> <span class="python-booleen">False, False, False</span>
+	<span class="python-code">elif</span> button_id <span class="attribute-component">==</span> <span class="attribute">"switch_transversalite_2"</span>:
+	  <span class="python-code">if</span> transversalite_on:
+		<span class="python-code">return</span> <span class="python-booleen">False, False, True</span>
+	  <span class="python-code">else</span>:
+		<span class="python-code">return</span> <span class="python-booleen">False, False, False</span>
+	<span class="python-code">else</span>:
+	  <span class="python-code">return</span> <span class="python-booleen">False, False, False</span>
+										</pre>
+									</div>
+									<p class="text-situation">Le code suivant représente une callback mise en place pour
+										la gestion des boutons "switch". Tout se base sur des conditions booléennes,
+										désactivant les autres boutons lorsque l'un d'eux est activé. Cela permet la
+										surcharge de requête sur la base de données et sur la page. En somme, nous
+										appelons une bibliothèque (ctx) pour obtenir le contexte du callback en cours
+										d'exécution, cela sert à déterminer l'élément déclencheur du callback. Par la
+										suite, nous accédons au premier élément de la liste, en renvoyant l'id de la
+										propriété pour finalement initialiser une variable contenant l'id du bouton
+										cliqué. Il y a ensuite une vérification du bouton déclenché avec la gestion en
+										booléen de l'activation ou non, pour n'en garder qu'un.</p>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="situation-content">
+							<p class="main-word">Situation</p>
+							<p class="situation-name">Ajout de la page "Patch Note"</p>
+							<div class="info">
+								<div class="situation1">
+									<img class="img-situation1" src="images/stage1/situation3/AffichagePage.png"
+										alt="Screenshot de la page">
+									<p class="text-situation">La création d'une page pour afficher les mises à jour du
+										site est une idée qui m'est survenu durant le stage. Je l'ai donc soumis à mon
+										tuteur qui l'a approuvé et qui m'a donné certaines indications. Cette page
+										permet donc, dans une troisième catégorie de la sidebar, d'afficher des mises à
+										jour par date la plus récente. Si la date est supérieure à l'actuelle, la mise à
+										jour ne s'affichera pas. Le tout est stocké dans la base de données, plus
+										précisément dans une table créée pour l'occasion.</p>
+								</div>
+								<div class="situation1">
+									<p class="text-situation">Le code suivant représente le fichier de migration vers la
+										base de données. La classe créée est ainsi converti et injecté dans la base de
+										données selon son contenu. Ici l'id représente la clé primaire, la description
+										est un champ de texte et la date_created correspond à la date associé à la mise
+										à jour</p>
+									<img class="img-situation2" src="images/stage1/situation3/model.png"
+										alt="Screenshot de l'édition de la BDD">
+								</div>
+								<div class="situation1">
+									<img class="img-situation1" src="images/stage1/situation3/sidebar.png"
+										alt="Screenshot du code de la sidebar">
+									<p class="text-situation">Des modifications ont été apportées dans le fichier gérant
+										la sidebar, afin d'intégrer une troisième catégorie une page dirigeant vers
+										cette nouvelle "vue" Mise à jour !</p>
+								</div>
+								<div class="situation1">
+									<p class="text-situation">
+										Ce morceau de code représente la création de la page d'administration depuis le
+										fichier parent "app.py". C'est ici qu'est listés tout le contenu de la table
+										"MiseAJour". La page est donc accessible seulement pour les administrateurs
+										grâce aux sessions qui permettent de filtrer les entrées. La date est ensuite
+										formatée au format souhaité, puis les colonnes sont renommées pour l'esthétique
+										de la page.</p>
+									<div class="code-block">
+										<pre><span class="python-code">
+class PatchNote(ModelView):
+	def is_accessible(self):
+	  if session["user"] in os.environ.get("USERS_ADMIN").split(", "):
+		  return True
+	  else:
+		  return False
+
+	def is_visible(self):
+	  if session["user"] in os.environ.get("USERS_ADMIN").split(", "):
+		  return True
+	  else:
+		  return False
+
+	def inaccessible_callback(self, name, **kwargs):
+	  return "Accès non autorisé."
+
+	def _date_created_formatter(self, view, context, model, name):
+	  if model.date_created:
+		  return model.date_created.astimezone(tz=tz.gettz('Europe/Paris')).strftime("%d/%m/%Y à %H:%M")
+	  else:
+		  return ""
+
+	form_widget_args = {
+		"description": {
+			"rows": 8
+		}
+	}
+
+	column_formatters = {
+		"date_created": _date_created_formatter
+	}
+
+	column_labels = {
+		"description": "Contenu de la mise à jour",
+		"date_created": "Date de la mise à jour"
+	}
+
+	can_export = True
+
+admin.add_view(PatchNote(MiseAJour, db.session, name="Création de note de mise à jour", endpoint="mise_a_jour", category="Admin"))
+										</span></pre>
+									</div>
+								</div>
+								<div class="situation1">
+									<img class="img-situation1" src="images/stage1/situation3/PageEdit.png"
+										alt="Screenshot de la page d'édition">
+									<p class="text-situation">La page ci-contre représente l'onglet d'administration de
+										la page lié à la base de données. C'est ici que tout est listé, que nous pouvons
+										supprimer, modifier ou ajouter des informations de mises à jour !</p>
+								</div>
+								<div class="situation1">
+									<p class="text-situation">Dans le fichier <code>controller.py</code> ci-contre, la
+										fonction permet d'importer les données depuis une table, de renommer les
+										champs/colonnes et d'ensuite les mettre dans un tableau associatif. Les dates
+										sont ensuite vérifiées une par une afin d'enlever celle qui sont supérieures à
+										la date actuelle. Cette fonction est finalement appelée dans le fichier
+										layout.py pour traiter l'affichage en HTML & CSS</p>
+									<img class="img-situation2" src="images/stage1/situation3/controller.png"
+										alt="Screenshot de controller.py, import des données">
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="situation-content">
+							<p class="main-word">Situation</p>
+							<p class="situation-name">Ajout d'un troisième filtre par "Statut"</p>
+							<div class="info">
+								<div class="situation1">
+									<p class="text-situation">Avant, il était impossible de trier et d'afficher les
+										projets par statut, donc lors de réunion pour exposer des nombres, de nombreux
+										projets terminés étaient comptés avec les autres. C'est ainsi que j'ai mis en
+										place une troisième section au sein des filtres, afin de pouvoir gérer selon
+										leurs statuts actuels !</p>
+									<img class="img-situation2" src="images/stage1/situation4/Site.png"
+										alt="Screenshot du troisième filtre sur les pages Synthèses">
+								</div>
+								<div class="situation1">
+									<img class="img-situation1" src="images/stage1/situation4/controller.png"
+										alt="Screenshot de controller.py">
+									<p class="text-situation">Le code montre les différences de code entre le dernier
+										push sur le repository et les dernières modifications en local. Un nouveau
+										"State" a été mis en place pour accueillir les nouveaux filtres, en l'ajoutant
+										en paramètres de la fonction mère et en modifiant tout le code dès qu'il devait
+										prendre en compte les filtres, puisque c'est ici que les données sont traitées.
+									</p>
+								</div>
+								<div class="situation1">
+									<p class="text-situation">Une fonction a été créée pour appeler les données selon la
+										colonne "Statut", tout est trié et organisé dans une même fonction. Ensuite, les
+										données sont ajoutées dans la liste qui contient tout, afin de ne garder que
+										celle correspondant aux différents filtres. Finalement, la variable "phases" est
+										ajoutée en paramètres à toutes les fonctions où les informations relatives aux
+										filtres sont nécessaires.</p>
+									<img class="img-situation2" src="images/stage1/situation4/model.png"
+										alt="Screenshot de model.py">
+								</div>
+								<div class="situation1">
+									<img class="img-situation1" src="images/stage1/situation4/layout.png"
+										alt="Screenshot de layout.py">
+									<p class="text-situation">Dans la fonction qui gère l'affichage de la page, la
+										variable "phases" a été passée en paramètres, en contenant les informations
+										relatives à ce filtre. De plus, une colonne a été ajoutée en dessous des deux
+										précédentes pour afficher la section du troisième filtre !</p>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="situation-content">
+							<p class="main-word">Situation</p>
+							<p class="situation-name">Mise en place d'un système de log</p>
+							<div class="info">
+								<div class="situation1">
+									<p class="text-situation">Afin de trouver les potentielles parties de l'application
+										qui ralentissait le site, nous avons décidé de mettre en place un système de
+										"log", afin de les comprendre et les analyser. Notre choix s'est porté sur le
+										plugiciel "snakeviz", qui permet à chaque requête, de créer un fichier avec les
+										détails de chaque méthode, fonctions et autres, avec le temps cumulé</p>
+									<img class="img-situation2" src="images/stage1/situation5/SnakevizLayout.png"
+										alt="Screenshot de la page web recensant les logs">
+								</div>
+								<div class="situation1">
+									<img class="img-situation1" src="images/stage1/situation5/CodeLog.png"
+										alt="Screenshot du code pour la configuration du serveur">
+									<p class="text-situation">Pour mettre en place les analyses de performances, il a
+										fallu modifier le fichier gérant le démarrage du serveur en local en y ajoutant
+										le code suivant ! Tout cela correspond à du simple paramétrage, avec notamment
+										une variable d'environnement pour le chemin vers le stockage de ces fichiers.
+										Pour accéder et interpréter les fichiers de logs qui sont au format .prof, il
+										faut ouvrir un nouveau terminal et écrire "snakeziz [chemin vers le dossier] ".
+										Tous les fichiers seront ainsi listés et il s'agit simplement de cliquer sur
+										celui correspondant</p>
+								</div>
+								<div class="situation1">
+									<p class="text-situation">Finalement, une fois le serveur snakeviz lancé, nous avons
+										accès à une page web recensant tout le contenu du dossier indiqué. De plus, le
+										fichier d'instruction ReadMe a dû être édité pour ajouter les explications quant
+										à la mise en place locale de ce système</p>
+									<img class="img-situation2" src="images/stage1/situation5/StartSnakeviz.png"
+										alt="Screenshot du lancement du serveur snakeviz">
+								</div>
+							</div>
+						</div>
+						<div class="situation-content">
+							<p class="main-word">Situation</p>
+							<p class="situation-name">Optimisation des ressources allouées</p>
+							<div class="info">
+								<div class="situation1">
+									<img class="img-situation1" src="images/stage1/situation6/tableurRessources.png"
+										alt="Screenshot du tableur excel de gestion des ressources">
+									<p class="text-situation">L'un des problèmes majeurs lié à l'optimisation et les
+										performances de l'application web se trouvait finalement dans la gestion des
+										ressources allouées (CPU et RAM). C'est pourquoi j'ai décidé de mettre en place
+										un tableur Excel, exposant les ressources à dispositions, et les configurations.
+										Le cumul est aussi calculé afin d'éviter tout problème. Quand le max est affiché
+										en vert, c'est que le "pod" a encore de la marge, en jaune quand il s'approche
+										du maximum et en rouge quand il est au maximum possible ou au delà. Ce tableur
+										nous a permis de prévoir la nouvelle répartition des ressources pour rendre le
+										site plus performant.</p>
+								</div>
+								<div class="situation1">
+									<p class="text-situation">Pour ce faire, j'ai dû éditer les fichiers de "deployment"
+										qui permettent de construire les pods individuellement pour faire marcher
+										l'application. Les ressources ont donc été modifiées en augmentant leurs
+										capacités minimales et maximales !</p>
+									<img class="photo-situation2" src="images/stage1/situation6/appRessources.png"
+										alt="Screenshot du fichier de configuration">
+								</div>
+								<div class="situation1">
+									<img class="img-situation1" src="images/stage1/situation6/error.png"
+										alt="Screenshot de l'erreur">
+									<p class="text-situation">Cependant, lors du premier push sur le repo et la mise en
+										production, une erreur est survenu, expliquant qu'il n'arrivait pas à comprendre
+										et donc compiler la partie "ressources". En effet, selon a typologie du langage
+										actuel, "ressources" est censé ne prendre qu'un seul "s", hors ici il en avait
+										2, d'où l'erreur qui empêchait la compilation et l'interprétation des
+										informations. Ce problème datait d'il y a plus d'un an maintenant, et puisque
+										l'application n'avait pas de ressources en paramètres, elle prenait celle par
+										défaut, ce qui bridait donc le site.</p>
+								</div>
+								<div class="situation1">
+									<p class="text-situation">Finalement, comme observé sur le Dashboard ou pannel
+										d'administration de l'application, depuis que le bug a été corrigé et les
+										ressources augmentées, l'application web fonctionne bien mieux ! Le site ne
+										plante plus, il est largement plus rapide et les retours des utilisateurs en est
+										positif.</p>
+									<img class="img-situation2" src="images/stage1/situation6/dashboard.png"
+										alt="Screenshot du dashboard d'administration">
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="situation-content">
+							<p class="main-word">Autres</p>
+							<div class="situation1">
+								<p class="text-situation">Auparavant, Aurélien Traynard chargé de l'application web
+									Piloter travailler seul dessus, cependant lorsque je suis arrivé, il est vite devenu
+									compliqué de s'y retrouver sur GitLab lors des push et autre, c'est pourquoi nous
+									avons mis en place un système de branch. Je n'avais qu'à créer une branche et push
+									dessus, pour que me responsable pull et test en local avant de valider la mise en
+									production.</p>
+								<img class="img-situation2" src="images/stage1/Annexes/GitBranch.png"
+									alt="Screenshot d'une création de branche">
+							</div>
+							<div class="situation1">
+								<img class="img-situation1" src="images/stage1/Annexes/MergeRequest.png"
+									alt="Screenshot d'une merge request">
+								<p class="text-situation">En suivant la logique des "branch", il a fallu mettre en place
+									le système de "merge request". En somme, quand je push sur une branch, sur GitLab,
+									je viens créer une requête à valider par les personnes ayant les permissions, sans
+									ça le code push ne peux se mettre en production. Ce système permet d'éviter des
+									maladresses et un dernier test et/ou vérification.</p>
+							</div>
+							<div class="situation1">
+								<p class="text-situation">Chaque semaine, la DAAG (Architecture & Gourvenance)
+									organisait un point d'équipe d'environ une heure dans une salle de réunion. Durant
+									cette réunion, le directeur de la direction prenait la parole et faisait un point
+									des différents projets, des nouveautés, etc. puis chacun pouvait prendre la parole
+									pour débattre ou parler de certaines choses. Cela permet d'être au courant de ce qui
+									se passe au sein même de son équipe et de mettre au point certaines choses.</p>
+								<img class="photo-situation2" src="images/stage1/Annexes/Réunion.jpg"
+									alt="Photo d'une réunion d'équipe">
+							</div>
+							<div class="situation1">
+								<img class="photo-situation1" src="images/stage1/Annexes/Séminaire.jpg"
+									alt="Photo du séminaire de la délégation">
+								<p class="text-situation">Durant mon stage, j'ai eu l'occasion de participer à un large
+									séminaire d'une journée entière, avec toutes les délégations de notre délégation
+									mère. Ce séminaire avait pour but de renforcer les liens et d'apprendre à connaître
+									les équipes qui parfois n'ont aucun lien avec les nôtres, mais qui font partie de la
+									même délégation parent. Ce séminaire s'est découpé en deux parties, une première
+									partie sous forme de conférence, ou différents agents de la métropole venaient
+									parler sur scène de projet ou de concept, et une deuxième partie sous forme de jeu :
+									un murder game par équipe aléatoire dans le Vieux Lyon</p>
+							</div>
+							<div class="situation1">
+								<p class="text-situation">La métropole et plus particulièrement la DINSI (Direction
+									innovation numérique et systèmes d'information), organise ce qu'ils appellent des
+									forums. Ces forums se déroulent dans une grande salle comme montrée sur la photo,
+									avec des micros pour chacun et des participants au centre. Ces forums ont pour but
+									d'exposer certains grands projets ou sujet de la direction, c'est un moment
+									d'échange et d'informations.</p>
+								<img class="photo-situation2" src="images/stage1/Annexes/Forum.jpg"
+									alt="Photo d'un forum de la métropole">
+							</div>
+							<div class="situation1">
+								<img class="photo-situation1" src="images/stage1/Annexes/Piloter.jpg"
+									alt="Photo de présentation de Piloter, l'application web">
+								<p class="text-situation">D'autres tâches m'ont aussi été confiées durant ce stage, j'ai
+									même eu l'occasion de soumettre certaines idées. Des idées validées qui, pour la
+									plupart sont actuellement présentes sur le site.
+									Il y a eu notamment eu l'ajout d'une page de suggestion, qui redirige vers la
+									création d'une "Issue" sur GitLab, la suppression de la barre défilement horizontal
+									pour l'esthétique, l'ajout du champ propriétaire dans la base de données pour
+									certains projets. Sur le panel Admin, le favicon a été changé, un bouton de retour
+									vers le site a été ajouté dans la navbar, j'ai eu l'opportunité de réaliser
+									plusieurs ajouts et modifications mineures pour l'expérience utilisateur sue le
+									site.
+									Finalement, j'ai pu m'entretenir pour comprendre le métier de plusieurs membres de
+									l'équipe, comme les architectes, les experts en cybersécurité, le cartographe, etc.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
