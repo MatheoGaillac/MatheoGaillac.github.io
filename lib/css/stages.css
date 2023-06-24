@@ -225,10 +225,18 @@ hr {
 	.situation .code-block {
 		width: 50% !important;
 	}
+
 }
 
 @media (max-width: 1024px) {
 	.info-content {
 		margin-left: 2%;
+	}
+
+	.row {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 }
