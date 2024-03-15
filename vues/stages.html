@@ -5,9 +5,15 @@
 	<div class="info-wrapper">
 		<div class="info-content">
 			<p>Mes <span class="main-word">stages</span></p>
-			<div class="icon-stage-1" onclick="showStage1()">
-				<img id="logo-stage" src="images/logoStage1.png" alt="Logo de la Métropole de Lyon">
-				<p class="description-text">"La métropole de Lyon"<br>15 Mai 2023 - 23 Juin 2023</p>
+			<div class="stage-header">
+				<div class="icon-stage stage1" onclick="showStage1()">
+					<img id="logo-stage" src="images/logoStage1.png" alt="Logo de la Métropole de Lyon">
+					<p class="description-text">"La métropole de Lyon"<br>15 Mai 2023 - 23 Juin 2023</p>
+				</div>
+				<div class="icon-stage stage2" onclick="showStage2()">
+					<img id="logo-stage2" src="images/logoStage2.jpg" alt="Logo de Nivo-Web">
+					<p class="description-text">"Nivo-Web"<br>08 Janvier 2024 - 16 Février 2024</p>
+				</div>
 			</div>
 			<div id="stage-1" style="display: none;">
 				<p class="main-title">La métropole de Lyon</p>
@@ -490,6 +496,8 @@ admin.add_view(PatchNote(MiseAJour, db.session, name="Création de note de mise 
 					</div>
 				</div>
 			</div>
+			<div id="stage-2" style="display: none;">
+			<p>sdqqsd</p></div>
 		</div>
 	</div>
 	</div>

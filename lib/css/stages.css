@@ -43,7 +43,13 @@ hr {
 	margin-bottom: 0;
 }
 
-.icon-stage-1 {
+.stage-header{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.icon-stage {
 	background-color: #928880;
 	border-radius: 15px;
 	margin-left: 2%;
@@ -60,6 +66,10 @@ hr {
 
 #logo-stage {
 	width: 70%;
+}
+
+#logo-stage2 {
+	width: 34%;
 }
 
 #stage-1 {
