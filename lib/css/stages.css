@@ -72,18 +72,18 @@ hr {
 	width: 34%;
 }
 
-#stage-1 {
+#stage-1, #stage-2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
-#stage-1 .main-title {
+#stage-1 .main-title, #stage-2 .main-title {
 	margin-bottom: 0;
 }
 
-#stage-1 .date {
+#stage-1 .date, #stage-2 .date {
 	margin-top: 0.5%;
 	font-size: 1em;
 }
