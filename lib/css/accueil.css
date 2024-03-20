@@ -116,27 +116,31 @@ body {
 }
 
 .dot-2 {
-	top: 10.5%;
+	top: 8%;
 }
 
 .dot-3 {
-	top: 27.5%;
+	top: 20.5%;
 }
 
 .dot-4 {
-	top: 35%;
+	top: 26%;
 }
 
 .dot-5 {
-	top: 48.5%;
+	top: 36.5%;
 }
 
 .dot-6 {
-	top: 62.5%;
+	top: 46.5%;
 }
 
 .dot-7 {
-	top: 82.5%;
+	top: 61%;
+}
+
+.dot-8 {
+	top: 77.5%;
 }
 
 @media (max-width: 1024px) {
