@@ -1,155 +1,147 @@
 @import url('fonts.css');
 
 body {
-	font-family: 'Belleza', sans-serif;
+    font-family: 'Belleza', sans-serif;
+    background-color: #435861;
+    top: 0;
+    left: 0;
 }
 
 .info-wrapper {
-	position: relative;
+    position: relative;
 }
 
 .info-content {
-	position: relative;
-	margin-left: 420px;
+    position: relative;
+    margin-left: 200px;
 }
 
 .info-content p {
-	color: white;
-	font-size: 2em;
+    color: white;
+    font-size: 2em;
 }
 
 .main-word {
-	color: #A3C0E6;
+    color: #A3C0E6;
 }
 
 .info-content .title-perks {
-	font-size: 1.5em;
-	background-color: #928880;
-	padding: 0.5% 1%;
-	border-radius: 10px;
-	width: 275px;
+    font-size: 1.5em;
+    background-color: #928880;
+    padding: 0.5% 1%;
+    border-radius: 10px;
+    width: 275px;
 }
 
 .info-content .description-perks {
-	font-size: 1.3em;
+    font-size: 1.3em;
 }
 
 .info-content .description-text {
-	color: #E2DED0;
-	text-align: justify;
-	font-size: 1em;
-	width: 60%;
+    color: #E2DED0;
+    text-align: justify;
+    font-size: 1em;
+    width: 60%;
 }
 
 .list-perks {
-	color: white;
-	font-size: 1.3em;
-	display: flex;
-	justify-content: flex-start;
-	margin-top: -2%;
+    color: white;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -2%;
 }
 
-.list-perks ul{
-	margin-right: 3%;
+.list-perks ul {
+    margin-right: 3%;
 }
 
 .trait {
-	position: absolute;
-	margin-top: 1.5%;
-	margin-left: 27.5%;
-	transform: translateX(-50%);
-	width: 4px;
-	height: 95%;
-	background-color: #E2DED0;
+    position: absolute;
+    margin-top: 1.5%;
+    margin-left: 27.5%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 95%;
+    background-color: #E2DED0;
 }
 
 .dot {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	left: -4px;
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	background-color: #A3C0E6;
-	z-index: 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: -4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #A3C0E6;
+    z-index: 1;
 }
 
 .text-dot {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	margin-top: 10px;
-	margin-left: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 100px;
 }
 
 .text-pair {
-	display: flex;
-	text-align: justify;
+    display: flex;
+    text-align: justify;
 }
 
 .text-dot p {
-	font-size: 1em;
-	color: #E2DED0;
+    font-size: 1em;
+    color: #E2DED0;
 }
 
 .text-left-1,
 .text-left-2 {
-	text-align: right;
-	width: 25%;
-	margin-right: 5%;
+    text-align: right;
+    width: 25%;
+    margin-right: 5%;
 }
 
 .text-right-1,
 .text-right-2 {
-	text-align: left;
-	width: 25%;
+    text-align: left;
+    width: 25%;
 }
 
 .title-left,
 .title-right {
-	color: #A3C0E6;
+    color: #A3C0E6;
 }
 
 .dot-1 {
-	top: 0%;
+    top: 0%;
 }
 
 .dot-2 {
-	top: 8%;
+    top: 8%;
 }
 
 .dot-3 {
-	top: 20.5%;
+    top: 20.5%;
 }
 
 .dot-4 {
-	top: 26%;
+    top: 26%;
 }
 
 .dot-5 {
-	top: 36.5%;
+    top: 36.5%;
 }
 
 .dot-6 {
-	top: 46.5%;
+    top: 46.5%;
 }
 
 .dot-7 {
-	top: 61%;
+    top: 61%;
 }
 
 .dot-8 {
-	top: 77.5%;
-}
-
-@media (max-width: 1024px) {
-	.info-content {
-		margin-left: 2%;
-		width: 70%;
-	}
-
-	.text-dot {
-		margin-left: 5%;
-	}
+    top: 77.5%;
 }
