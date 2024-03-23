@@ -31,7 +31,7 @@ hr {
 
 .main-word,
 .section .main-word {
-	color: #A3C0E6;
+	color: #A3C0E6!important;
 	padding-top: 1%;
 }
 
