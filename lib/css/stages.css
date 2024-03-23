@@ -46,34 +46,6 @@ hr {
 	margin-bottom: 0;
 }
 
-.stage-header{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-.icon-stage {
-	background-color: #928880;
-	border-radius: 15px;
-	margin-left: 2%;
-	width: 200px;
-	padding: 1%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.473);
-	cursor: pointer;
-}
-
-#logo-stage {
-	width: 70%;
-}
-
-#logo-stage2 {
-	width: 34%;
-}
 
 #stage-1, #stage-2 {
 	display: flex;
@@ -138,42 +110,23 @@ hr {
 .situation-content {
 	background-color: #92888094;
 	border-radius: 30px;
-	margin-left: 12%;
-	margin-right: 12%;
-	padding-left: 1%;
-	padding-right: 1%;
-	padding-bottom: 1%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .img-situation1,
-.img-situation2,
-.photo-situation1,
-.photo-situation2 {
+.img-situation2{
 	border-radius: 20px;
 	border: 3px solid #A3C0E6;
 }
 
 .img-situation1 {
-	width: 75%;
-	margin-right: 2%;
+	margin-right: 5%;
 	margin-bottom: 3%;
 }
 
 .img-situation2 {
-	width: 70%;
-	margin-left: 2%;
-	margin-bottom: 3%;
-}
-
-.photo-situation1 {
-	width: 40%;
-	margin-right: 2%;
-	margin-bottom: 3%;
-}
-
-.photo-situation2 {
-	width: 40%;
-	margin-left: 2%;
+	margin-left: 5%;
 	margin-bottom: 3%;
 }
 
